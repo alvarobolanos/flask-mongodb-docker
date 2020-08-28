@@ -1,0 +1,23 @@
+<!-- templates/report.html -->
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+  <h1>This is the report page.</h1>
+
+  {% if bool(re.match(r'[A-Z]+$',{{name}}) %}
+      return redirect({{url_for('thank_you')}})
+  {% else %}
+      return redirect({{url_for('home')}})
+  {% endif %}
+
+
+
+
+
+</div>
+
+
+{% endblock %}

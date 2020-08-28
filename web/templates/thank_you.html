@@ -1,0 +1,13 @@
+<!-- templates/thank_you.html -->
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+  <h1>Thanks for signing up {{first_name}} {{last_name}}</h1>
+  <p>You will receive a confirmation email at: {{email}}</p>
+</div>
+
+
+{% endblock %}
