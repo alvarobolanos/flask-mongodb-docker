@@ -3,8 +3,12 @@
 from flask import Flask, render_template, redirect, url_for, request, jsonify
 from flask_restful import Api, Resource
 
+from pymongo import MongoClient
+
 app = Flask(__name__) 						# Instantiate a Flask object.
 api = Api(app)								# Instantiate an Api object.
+
+client = MongoClient("mongodb://db:27017")  # Connects to the mongo database.
 
 # Routes
 @app.route('/')
